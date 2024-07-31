@@ -13,11 +13,3 @@ vim.api.nvim_create_autocmd({"BufRead", "BufNewFile"}, {
 vim.wo.foldmethod = 'expr'
 vim.wo.foldexpr = 'nvim_treesitter#foldexpr()'
 
-local wk = require("which-key")
-
-local builtin = require('telescope.builtin')
-vim.keymap.set('n', '<leader>fs', builtin.lsp_document_symbols, {})
-
-wk.add({
-  {"<leader>fs", desc = "Document Symbols"}
-})
