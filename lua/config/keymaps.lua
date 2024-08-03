@@ -40,7 +40,6 @@ wk.add({
   { "<leader>fs", telescope.lsp_document_symbols, desc = "Document Symbols" }
 })
 
-
 wk.add({
   { "<leader>t", desc = "telescope" },
   {
@@ -73,5 +72,7 @@ wk.add({
   }
 })
 
-vim.api.nvim_set_keymap('n', '<leader>tx', '<cmd>lua Toggle_search_hidden()<CR>', {noremap = true, silent = true})
+wk.add({
+  { '<leader>tx', '<cmd>lua Toggle_search_hidden()<CR>', desc = "Toggle exclude hidden" }
+})
 
