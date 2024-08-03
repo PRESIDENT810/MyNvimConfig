@@ -3,8 +3,37 @@
 -- Add any additional keymaps here
 
 local wk = require("which-key")
-
 local telescope = require('telescope.builtin')
+
+
+-- Use option+left/right to move to the start/ end of line in insert mode
+vim.api.nvim_set_keymap('i', '<M-left>', '<Esc>0i', {noremap = true, silent = true})
+vim.api.nvim_set_keymap('i', '<M-right>', '<Esc>$a', {noremap = true, silent = true})
+
+vim.api.nvim_set_keymap('i', '<M-S-left>', '<Esc>bi', {noremap = true, silent = true})
+vim.api.nvim_set_keymap('i', '<M-S-right>', '<Esc>ea', {noremap = true, silent = true})
+
+-- Use option+shift+up/down to move around in insert mode and exit any prompt
+vim.api.nvim_set_keymap('i', '<M-S-up>', '<Esc>ka', {noremap = true, silent = true})
+vim.api.nvim_set_keymap('i', '<M-S-down>', '<Esc>ja', {noremap = true, silent = true})
+
+-- Use option+left/right to move around in normal mode
+vim.api.nvim_set_keymap('n', '<M-left>', '0', {noremap = true, silent = true})
+vim.api.nvim_set_keymap('n', '<M-right>', '$', {noremap = true, silent = true})
+
+-- Use option+shift+arrow keys to select text
+vim.api.nvim_set_keymap('n', '<M-S-left>', 'b', {noremap = true, silent = true})
+vim.api.nvim_set_keymap('n', '<M-S-right>', 'e', {noremap = true, silent = true})
+
+vim.api.nvim_set_keymap('v', '<M-left>', 'b', {noremap = true, silent = true})
+vim.api.nvim_set_keymap('v', '<M-right>', 'e', {noremap = true, silent = true})
+
+vim.api.nvim_set_keymap('v', '<M-S-left>', 'b', {noremap = true, silent = true})
+vim.api.nvim_set_keymap('v', '<M-S-right>', 'e', {noremap = true, silent = true})
+
+-- Use control+arrow keys to move to the beginning/end of line
+vim.api.nvim_set_keymap('n', '<C-left>', '^', {noremap = true, silent = true})
+vim.api.nvim_set_keymap('n', '<C-right>', '$', {noremap = true, silent = true})
 
 
 wk.add({
@@ -14,9 +43,8 @@ wk.add({
 
 wk.add({
   { "<leader>t", desc = "telescope" },
-
   {
-    mode = { "n", "v" },
+    mode = { "n" },
     { "<leader>tm", telescope.keymaps, desc = "keymaps" },
     { "<leader>tq", telescope.quickfix, desc = "quickfix" },
     { "<leader>tl", telescope.loclist, desc = "loclist" },
@@ -35,6 +63,15 @@ wk.add({
     { "<leader>ta", telescope.lsp_workspace_diagnostics, desc = "workspace diagnostics" },
     { "<leader>ty", telescope.lsp_dynamic_workspace_symbols, desc = "dynamic workspace symbols" },
     { "<leader>te", telescope.lsp_workspace_code_actions, desc = "workspace code actions" },
-  }
+  },
 
+  { "<leader>l", desc = "lazy"},
+  {
+    mode = { "n", "v"},
+    { "<leader>ll", "<cmd>Lazy<cr>", desc = "lazy home"},
+    { "<leader>le", "<cmd>LazyExtras<cr>", desc = "lazy extra home"},
+  }
 })
+
+vim.api.nvim_set_keymap('n', '<leader>tx', '<cmd>lua Toggle_search_hidden()<CR>', {noremap = true, silent = true})
+
