@@ -7,7 +7,7 @@ local telescope = require('telescope.builtin')
 
 
 -- Use option+left/right to move to the start/ end of line in insert mode
-vim.api.nvim_set_keymap('i', '<M-left>', '<Esc>0i', {noremap = true, silent = true})
+vim.api.nvim_set_keymap('i', '<M-left>', '<Esc>^i', {noremap = true, silent = true})
 vim.api.nvim_set_keymap('i', '<M-right>', '<Esc>$a', {noremap = true, silent = true})
 
 vim.api.nvim_set_keymap('i', '<M-S-left>', '<Esc>bi', {noremap = true, silent = true})
@@ -18,7 +18,7 @@ vim.api.nvim_set_keymap('i', '<M-S-up>', '<Esc>ka', {noremap = true, silent = tr
 vim.api.nvim_set_keymap('i', '<M-S-down>', '<Esc>ja', {noremap = true, silent = true})
 
 -- Use option+left/right to move around in normal mode
-vim.api.nvim_set_keymap('n', '<M-left>', '0', {noremap = true, silent = true})
+vim.api.nvim_set_keymap('n', '<M-left>', '^', {noremap = true, silent = true})
 vim.api.nvim_set_keymap('n', '<M-right>', '$', {noremap = true, silent = true})
 
 -- Use option+shift+arrow keys to select text
