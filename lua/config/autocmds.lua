@@ -12,6 +12,10 @@ vim.api.nvim_create_autocmd({"BufRead", "BufNewFile"}, {
 -- 开启 Folding
 vim.wo.foldmethod = 'expr'
 vim.wo.foldexpr = 'nvim_treesitter#foldexpr()'
+vim.api.nvim_create_autocmd("FileType", {
+  pattern = "*",
+  command = "set formatoptions-=cro"
+})
 
 local function save_colorscheme()
   -- 获取当前颜色方案
