@@ -158,10 +158,10 @@ require("lspconfig").clangd.setup {
   },
 }
 
-local animate = require("mini.animate")
-animate.setup({
-  scroll = {
-    timing = animate.gen_timing.linear({ duration = 50, unit = "total" }),
-  },
-})
+-- local animate = require("mini.animate")
+-- animate.setup({
+--   scroll = {
+--     timing = animate.gen_timing.linear({ duration = 50, unit = "total" }),
+--   },
+-- })
 

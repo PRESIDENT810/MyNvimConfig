@@ -25,8 +25,8 @@ vim.api.nvim_set_keymap('n', '<M-right>', '$', {noremap = true, silent = true})
 vim.api.nvim_set_keymap('n', '<M-S-left>', 'b', {noremap = true, silent = true})
 vim.api.nvim_set_keymap('n', '<M-S-right>', 'e', {noremap = true, silent = true})
 
-vim.api.nvim_set_keymap('v', '<M-left>', 'b', {noremap = true, silent = true})
-vim.api.nvim_set_keymap('v', '<M-right>', 'e', {noremap = true, silent = true})
+vim.api.nvim_set_keymap('v', '<M-left>', '^', {noremap = true, silent = true})
+vim.api.nvim_set_keymap('v', '<M-right>', '$', {noremap = true, silent = true})
 
 vim.api.nvim_set_keymap('v', '<M-S-left>', 'b', {noremap = true, silent = true})
 vim.api.nvim_set_keymap('v', '<M-S-right>', 'e', {noremap = true, silent = true})
@@ -34,11 +34,6 @@ vim.api.nvim_set_keymap('v', '<M-S-right>', 'e', {noremap = true, silent = true}
 -- Use control+arrow keys to move to the beginning/end of line
 vim.api.nvim_set_keymap('n', '<C-left>', '^', {noremap = true, silent = true})
 vim.api.nvim_set_keymap('n', '<C-right>', '$', {noremap = true, silent = true})
-
-
-wk.add({
-  { "<leader>fs", telescope.lsp_document_symbols, desc = "Document Symbols" }
-})
 
 wk.add({
   { "<leader>t", desc = "telescope" },
