@@ -36,6 +36,11 @@ vim.api.nvim_set_keymap('n', '<C-left>', '^', {noremap = true, silent = true})
 vim.api.nvim_set_keymap('n', '<C-right>', '$', {noremap = true, silent = true})
 
 wk.add({
+  { "<leader>fP", "<cmd>echo expand('%:p')<cr>", desc = "Echo absolute path"},
+  { "<leader>fp", "<cmd>echo expand('%p')<cr>", desc = "Echo relative path"},
+})
+
+wk.add({
   { "<leader>t", desc = "telescope" },
   {
     mode = { "n" },
