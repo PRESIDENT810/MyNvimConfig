@@ -17,6 +17,9 @@ vim.api.nvim_set_keymap('i', '<M-S-right>', '<Esc>ea', {noremap = true, silent =
 vim.api.nvim_set_keymap('i', '<M-S-up>', '<Esc>ka', {noremap = true, silent = true})
 vim.api.nvim_set_keymap('i', '<M-S-down>', '<Esc>ja', {noremap = true, silent = true})
 
+vim.api.nvim_set_keymap('n', '<M-S-up>', '<C-u>', {noremap = true, silent = true})
+vim.api.nvim_set_keymap('n', '<M-S-down>', '<C-d>', {noremap = true, silent = true})
+
 -- Use option+left/right to move around in normal mode
 vim.api.nvim_set_keymap('n', '<M-left>', '^', {noremap = true, silent = true})
 vim.api.nvim_set_keymap('n', '<M-right>', '$', {noremap = true, silent = true})
