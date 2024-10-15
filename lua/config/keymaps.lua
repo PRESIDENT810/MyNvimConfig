@@ -44,6 +44,10 @@ wk.add({
 })
 
 wk.add({
+  { "<leader>bw", "<cmd>set wrap!<cr>", desc = "Toggle wrap lines" }
+})
+
+wk.add({
   { "<leader>t", desc = "telescope" },
   {
     mode = { "n" },
