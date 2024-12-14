@@ -1,12 +1,18 @@
 return {
-  -- https://github.com/akinsho/git-conflict.nvim
+
+  {
+    'nvim-telescope/telescope.nvim',
+    tag = '0.1.8',
+    dependencies = { 'nvim-lua/plenary.nvim' }
+  },
+
+
   {
     'akinsho/git-conflict.nvim',
     version = "*",
     config = true
   },
 
-  -- https://github.com/williamboman/mason.nvim
   {
     "williamboman/mason.nvim",
     opts = {
@@ -32,7 +38,6 @@ return {
     },
   },
 
-  -- https://github.com/simrat39/symbols-outline.nvim
   {
     "simrat39/symbols-outline.nvim",
     cmd = "SymbolsOutline",

@@ -147,21 +147,3 @@ function Toggle_search_hidden()
   end
 end
 
-local cmp_nvim_lsp = require "cmp_nvim_lsp"
-
-require("lspconfig").clangd.setup {
-  -- on_attach = on_attach,
-  capabilities = cmp_nvim_lsp.default_capabilities(),
-  cmd = {
-    "clangd",
-    "--offset-encoding=utf-16",
-  },
-}
-
--- local animate = require("mini.animate")
--- animate.setup({
---   scroll = {
---     timing = animate.gen_timing.linear({ duration = 50, unit = "total" }),
---   },
--- })
-
